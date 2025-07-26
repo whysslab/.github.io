@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhySoSerious Lab</title>
+    <style>
+        @font-face {
+            font-family: 'Orbixbeta';
+            src: url('https://s3.adventure-x.org/Fonts/Orbixbeta-Regular.otf') format('opentype');
+        }
+        
+        body {
+            font-family: 'Orbixbeta', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo span:nth-child(1) { color: #FF5252; } /* Why */
+        .logo span:nth-child(2) { color: #4CAF50; } /* So */
+        .logo span:nth-child(3) { color: #2196F3; } /* Serious */
+        .logo span:nth-child(4) { color: #FFC107; } /* Lab */
+        
+        .ide-link {
+            padding: 8px 16px;
+            background-color: #673AB7;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .ide-link:hover {
+            background-color: #5E35B1;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+            font-size: 36px;
+            padding: 0 20px;
+        }
+        
+        .typed-cursor {
+            font-size: 36px;
+            opacity: 1;
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <span>Why</span>
+            <span>So</span>
+            <span>Serious</span>
+            <span> Lab</span>
+        </div>
+        <a href="https://ide.wsslab.tech" class="ide-link">WSS IDE</a>
+    </div>
+    
+    <div class="content">
+        <span id="typed-text"></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('#typed-text', {
+                strings: [
+                    'for(;;) Create(something, new);',
+                    'for(;;) Create(something, useful);',
+                    'for(;;) Create(something, creatively);',
+                    'for(;;) Create(something, fun);',
+                    'for(;;) Create(something, AI);',
+                    'for(;;) Create(something, for_everyone);'
+                    'for(;;) Create(something, for world);'
+                ],
+                typeSpeed: 100,
+                backSpeed: 30,
+                loop: true,
+                showCursor: true,
+                cursorChar: '⚪'
+            });
+        });
+    </script>
+</body>
+</html>
